@@ -1,4 +1,4 @@
-class Open_Book_Request < ApplicationRecord
+class OpenBookRequest < ApplicationRecord
   belongs_to :book
   belongs_to :tutor
 

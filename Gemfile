@@ -75,4 +75,8 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem 'activeadmin'
+  gem 'devise'
+
+  gem 'whenever', :require => false
 end

@@ -1,0 +1,193 @@
+.home-page
+{
+  display: grid;
+  position: fixed;
+  grid-template-areas:
+  "navbar navbar"
+  "sidebar content";
+  grid-template-columns: 190px auto;         
+  grid-template-rows: 30px auto;
+  grid-gap: 0px;
+}
+
+.user-page
+{
+  display: grid;
+  position: fixed;
+  grid-template-areas:
+  "navbar navbar"
+  "sidebar user"
+  "sidebar content";
+  grid-template-columns: 190px auto;         
+  grid-template-rows: 30px 120px auto;
+  grid-gap: 0px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  overflow: hidden;
+  background-color: #666;
+  top: 30px;
+  left: 0;
+  width: 180px;
+  height: 100%;
+  padding: 5px;
+}
+
+.sidebar .button {
+  width: 177px;
+}
+
+.user-actions {
+  display: flex;
+  width: fit-content;
+  margin-right: 10px;
+  margin-left: auto;
+}
+
+.user-actions a
+{
+  margin: 0px;
+  font-size: 12px;
+  height: 17px;
+  line-height: 19px;
+  padding-block:1px;
+  padding-inline:6px;
+}
+
+.user-data {
+  background-color: #999999;
+  padding: 3px;
+  grid-area: user;
+}
+
+.book-list {
+  grid-area: content;
+  overflow-y: scroll;
+}
+
+.stretch
+{
+  margin-bottom:0px;
+}
+
+.book-list::-webkit-scrollbar {
+  width:10px;
+}
+
+.overlay-link{
+  position: absolute;    
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.name
+{
+  grid-area: name;
+  font-size: 16px;
+  line-height: 24px;
+  color: #515151;
+}
+
+.detail
+{
+  grid-area: details;
+  font-size: 14px;
+  line-height: 22px;
+  color: #515151;
+}
+.description
+{
+  overflow-y: scroll;
+  grid-area: description;
+  font-size: 14px;
+  line-height: 18px;
+  color: #515151;
+}
+
+.description::-webkit-scrollbar {
+  width:10px;
+}
+
+.book-list::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: #e7e7e7;
+    border: 1px solid #cacaca;
+}
+
+.book-list::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #7b94bd;
+}
+
+.book-list-item {
+  left:0;
+  right:0;
+  background: none;
+  border-color: #333;
+  border-width: 3px;
+  display: grid;
+  position: relative;
+
+  grid-template-areas:
+  "cover . name actions"
+  "cover . details actions"
+  "cover . description description";
+  grid-template-columns: 170px 20px auto 140px;
+  grid-template-rows: 24px 72px 104px;
+  grid-gap: 10px 0px;
+  padding: 10px;
+  background-color: #eeeeee;
+}
+
+.actions
+{
+  grid-area: actions;
+  opacity: 100%;
+  transition: opacity .2s;
+}
+
+.actions .button
+{
+  width:100%;
+  min-height:20px;
+}
+
+.authors
+{
+  display: flex;
+  gap: 12px;
+}
+
+.pagebar
+{
+  display:flex;
+  gap:3px;
+  margin: 3px 0px;
+  width: 177px;
+}
+
+.pagebar .button
+{
+  min-width:20px;
+  height:20px;
+}
+
+.pagebar .currentbutton
+{
+  display: block;
+  background-color: #888888;
+  color: #515151;
+  font-family: Lato,Segoe UI,sans-serif;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.25s;
+  min-width:20px;
+  height:20px;
+}

@@ -1,0 +1,22 @@
+<body class="book-page">
+            <nav class="navbar">
+                <%= button_to 'Домой', '/1', method: :get, :class=>"button" %> 
+              <div class="user-actions">
+              <% if @user_type > 0 %>
+                    <a class = "button" href='/user/1'>
+                    <%="#{@user.first_name} #{@user.last_name}" %>
+                    </a>
+                    <%= button_to 'Выйти', '/logout', method: :get, :class=>"button" %> 
+                  <% else %>
+                      <form action="/login" accept-charset="UTF-8" method="post" class="login">
+                      <input type="hidden" name="authenticity_token" value="10gyJlnXds_2ymbvS8DD1PkNpNd89XgKtIHySTjltkVFMgbmBICgWhG3FCd6n3hwY_kHRzEqE9hFgqvVRJ5I9g" autocomplete="off">          
+                        <input type="text" name="login" id="login" placeholder="Логин">
+                        <input type="password" name="password" id="password" placeholder="Пароль">
+                        <input type="submit" name="commit" value="Войти" class="button" data-disable-with="Войти">
+                      </form>
+                  <% end %>
+              </div>
+            </nav>
+
+<embed class="content" src= "<%=@open_book%>">
+</body>

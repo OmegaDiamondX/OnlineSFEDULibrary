@@ -1,4 +1,4 @@
-class Group_Book < ApplicationRecord
+class GroupBook < ApplicationRecord
   belongs_to :book
   belongs_to :group
 end

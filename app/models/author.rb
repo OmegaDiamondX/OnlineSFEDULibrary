@@ -1,4 +1,4 @@
 class Author < ApplicationRecord
-  has_many :books
-  validates :full_name, presense: true
+  has_and_belongs_to_many :books
+  validates :first_name, :last_name, presence: true
 end
